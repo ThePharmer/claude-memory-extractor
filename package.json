@@ -1,24 +1,41 @@
 {
-  "name": "claude-introspection",
-  "version": "0.1.0",
-  "description": "Memory system for Claude Code conversations",
-  "main": "dist/index.js",
+  "name": "claude-memory",
+  "version": "1.0.0",
+  "description": "Multi-dimensional memory extraction system for Claude Code conversations",
+  "main": "dist/cli.js",
+  "bin": {
+    "claude-memory": "dist/cli.js"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsx watch src/cli.ts",
     "test": "jest",
     "test:watch": "jest --watch",
-    "extract": "tsx src/cli.ts extract",
     "lint": "eslint src/**/*.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "claude",
+    "memory",
+    "extraction",
+    "ai",
+    "conversation",
+    "learning",
+    "introspection"
+  ],
+  "author": "Jesse Vincent <jesse@fsck.com> & Claude (Anthropic)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/obra/claude-memory.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.24.0",
-    "@lancedb/lancedb": "^0.5.0",
     "commander": "^11.0.0",
-    "dotenv": "^16.3.1",
-    "gray-matter": "^4.0.3",
-    "zod": "^3.22.0"
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.0",
