@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/jesse/.claude/projects/**)",
+      "Bash(cat:*)",
+      "Bash(find:*)",
+      "Bash(awk:*)",
+      "Bash(xargs cat:*)",
+      "Bash(jq:*)",
+      "Bash(npm install)",
+      "WebSearch"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
